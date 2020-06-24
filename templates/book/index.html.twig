@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+
+{#********* Autor: Aleksandra Bodziacka **********#}
+
+
+
+{% block title %}BookList{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1> Available Books</h1>
+    {% if not app.user %}
+    <p>Please sign in, if you want to rent a book.</p>
+    {% endif %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Publishment Studio</th>
+            <th scope="col">Year</th>
+            <th scope="col">Category</th>
+            <th></th>
+
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in booklist %}
+
+                <tr>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.author.name }} {{ item.author.lastname }}</td>
+                    <td>{{ item.print }}</td>
+                    <td>{{ item.year }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>
+                        {% if is_granted('ROLE_USER') and not  is_granted('ROLE_ADMIN')%}
+                        <button type="button" class="btn btn-question" onclick="location.href ='books/confirm/{{ item.id }}'">Order</button>
+                        {% endif %}
+
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+
+{#    This friendly message is coming from:#}
+{#    <ul>#}
+{#        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/symfony.localhost/src/Controller/BookController.php'|file_link(0) }}">src/Controller/BookController.php</a></code></li>#}
+{#        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/symfony.localhost/templates/book/index.html.twig'|file_link(0) }}">templates/book/index.html.twig</a></code></li>#}
+{#    </ul>#}
+</div>
+{% endblock %}

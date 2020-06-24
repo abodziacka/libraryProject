@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{#********* Autor: Aleksandra Bodziacka **********#}
+
+{% block title %}UsersBooks{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+  <div class="example-wrapper">
+
+      <table class="table table-striped">
+          <thead>
+          <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Publishment Studio</th>
+              <th scope="col">Year</th>
+              <th scope="col">Category</th>
+              <th>Username</th>
+              <th></th>
+
+          </tr>
+          </thead>
+          <tbody>
+          {% for item in bookList %}
+
+              <tr>
+                  <td>{{ item.title }}</td>
+                  <td>{{ item.author.name }} {{ item.author.lastname }}</td>
+                  <td>{{ item.print }}</td>
+                  <td>{{ item.year }}</td>
+                  <td>{{ item.description }}</td>
+                  <td>
+                      {% for order in item.orderedBooks %}
+                          {{ order.email }}
+                      {% endfor %}
+
+                  </td>
+                  <td><button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href ='/index.php/returnBook/{{item.id}}'">Return</button></td>
+
+
+              </tr>
+          {% endfor %}
+
+          </tbody>
+      </table>
+   </div>
+{% endblock %}

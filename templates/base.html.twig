@@ -1,0 +1,68 @@
+{#********* Autor: Aleksandra Bodziacka **********#}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spartan&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="{{ asset('/css/app.css')}}">
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 100px;">
+
+<div class="container ">
+        <a class="navbar-brand" href="{{path('homepage') }}">HomePage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{path('books') }}">Books <span class="sr-only">(current)</span></a>
+                </li>
+                {% if is_granted('ROLE_USER') and not  is_granted('ROLE_ADMIN')%}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{path('myBooks') }}"> Ordered Books <span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN')%}
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{path('userBooks') }}"> Users Ordered Books <span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('contact') }}">Contact</a>
+                </li>
+            </ul>
+{#            <form></form>#}
+            {% if app.user %}
+                <div class="mb-3">
+                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                </div>
+            {% else %}
+                <button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href ='/index.php/login'">Sign in</button>
+
+            {% endif %}
+
+        </div>
+</div>
+</nav>
+
+
+
+
+
+{% block body %}{% endblock %}
+<footer class="mt-5 p-3 text-center">
+    Made with <i style="color: red;" class="fa fa-heart"></i> by Ola & Marta!
+</footer>
+{% block javascripts %}{% endblock %}
+</body>
+</html>
