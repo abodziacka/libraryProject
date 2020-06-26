@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
@@ -40,6 +40,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{path('contact') }}">Contact</a>
                 </li>
+                <button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href ='register'">Register</button>
+
             </ul>
 {#            <form></form>#}
             {% if app.user %}
