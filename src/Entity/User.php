@@ -1,7 +1,7 @@
 <?php
 
 
-//********* Autor: Aleksandra Bodziacka **********
+//********* Autor: Aleksandra Bodziacka  + walidacja e-mail Marta Brzozowska**********
 
 
 namespace App\Entity;
@@ -11,6 +11,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -27,6 +28,7 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Email(message="Please enter valid email adress")
      */
     private $email;
 

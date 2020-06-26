@@ -16,13 +16,18 @@
         </div>
     {% endif %}
 
-    <div class="container">
-       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputEmail">Email</label>
-      <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+    <br>
+    <div class="container" style="width: 30%;">
+       <h1 class="h3 mb-3 font-weight-normal text-center">Please sign in</h1>
+        <label for="inputEmail" style="width: 30%" >Email</label>
+        <div class="d-flex justify-content-center">
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control " required autofocus>
+        </div>
+      <br>
        <label for="inputPassword">Password</label>
+        <div class="d-flex justify-content-center">
         <input type="password" name="password" id="inputPassword" class="form-control" required>
-
+        </div>
       <input type="hidden" name="_csrf_token"
                value="{{ csrf_token('authenticate') }}"
        >
@@ -38,17 +43,17 @@
 {#                </label>#}
 {#            </div>#}
 {#        #}
-
+        <br>
         <button class="btn btn-lg btn-primary" type="submit">
            Sign in
        </button>
     </div>
 </form>
-    {% if app.user %}
-    <div class="container">Don't have an account? Create one
+    <br>
+    <div class="container text-center">Don't have an account? Create one
     <a  href="{{ path('app_register') }}">here</a>
     </div>
-    {% endif %}
+
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-
+//********* Autor: Marta Brzozowska **********
 namespace App\Controller;
 
 
@@ -38,7 +38,8 @@ class RegisterController extends AbstractController
             $em->persist($user);
             $em->flush();
 
-            return $this->redirectToRoute('app_login');
+
+            return $this->redirectToRoute('app_success');
         }
 
 
