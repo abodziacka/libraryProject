@@ -25,7 +25,7 @@ class UserType extends AbstractType{
 
 
                ]])
-           ->add('password', RepeatedType::class, array(
+           ->add('plainPassword', RepeatedType::class, array(
                'type' => PasswordType::class,
                'invalid_message' => 'The password fields must match.',
                'options' => ['attr' => ['class' => 'form-control','style'=>' padding-bottom: 10px; margin-bottom: 10px;']],
