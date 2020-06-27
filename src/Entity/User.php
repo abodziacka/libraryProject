@@ -44,6 +44,12 @@ class User implements UserInterface
     private $password;
 
     /**
+     * @Assert\NotBlank()
+     * @Assert\Length(max=4096)
+     */
+    private $plainPassword;
+
+    /**
      * @ORM\ManyToMany(targetEntity=Book::class, mappedBy="orderedbooks")
      */
     private $books;
@@ -111,6 +117,16 @@ class User implements UserInterface
     {
         $this->password = $password;
         return $this;
+    }
+
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+
+    public function setPlainPassword($password)
+    {
+        $this->plainPassword = $password;
     }
 
     /**
