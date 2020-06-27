@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{#********* Autor: Aleksandra Bodziacka **********#}
+{#********* Autor: Aleksandra Bodziacka  + Marta Brzozowska **********#}
 
 {% block title %}Sign in!{% endblock %}
 
@@ -34,9 +34,12 @@
 
 
         <br>
-        <button class="btn btn-lg btn-primary" type="submit">
+        <button class="btn btn-question" type="submit">
            Sign in
        </button>
+        <br>
+        <div class="text-center">You don't have an account? <a  href="{{ path('app_register') }}"> Register</a></div>
+        <br>
     </div>
 </form>
 

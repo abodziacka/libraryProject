@@ -1,7 +1,7 @@
 <?php
 
 
-//********* Autor: Aleksandra Bodziacka  + walidacja e-mail Marta Brzozowska**********
+//********* Autor: Aleksandra Bodziacka**********
 
 
 namespace App\Entity;
@@ -28,7 +28,6 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
-     * @Assert\Email(message="Please enter valid email adress")
      */
     private $email;
 
@@ -50,9 +49,19 @@ class User implements UserInterface
     private $plainPassword;
 
     /**
+     * @ORM\Column(type="string")
+     */
+    private $name;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $surname;
+
+    /**
      * @ORM\ManyToMany(targetEntity=Book::class, mappedBy="orderedbooks")
      */
     private $books;
+
 
     public function __construct()
     {
@@ -128,6 +137,29 @@ class User implements UserInterface
     {
         $this->plainPassword = $password;
     }
+    public function getName(): ?string
+    {
+        return $this->name;
+    }
+
+    public function setName(string $name): self
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    public function getSurname(): ?string
+    {
+        return $this->surname;
+    }
+
+    public function setSurname(string $surname): self
+    {
+        $this->surname = $surname;
+
+        return $this;
+    }
 
     /**
      * @see UserInterface
@@ -173,6 +205,7 @@ class User implements UserInterface
 
         return $this;
     }
+
 
 
 }

@@ -58,25 +58,6 @@ body {
     transform: rotate(20deg);
 }
 
-.vote-arrows {
-    font-size: 1.5rem;
-}
-
-.vote-arrows span {
-    font-size: 1rem;
-}
-
-.vote-arrows a {
-    color: #444;
-}
-
-.vote-up:hover {
-    color: #3D9970;
-}
-.vote-down:hover {
-    color: #FF4136;
-}
-
 .btn-question {
     color: #FFFFFF;
     background-color: #ED7458;
