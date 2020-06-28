@@ -6,7 +6,7 @@
 Dodanie do końca pliku: 
 
 ><VirtualHost *:80>
-ServerName symfony.localhost
+⋅⋅⋅ServerName symfony.localhost.⋅⋅
  ServerAlias www.symfony.localhost
 DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"
  <Directory "C:/xampp/htdocs/symfony.localhost/public">
