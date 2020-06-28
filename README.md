@@ -7,7 +7,7 @@ Dodanie do końca pliku:
 
 ><VirtualHost *:80>\
 ServerName symfony.localhost\
- ServerAlias www.symfony.localhost\
+ ServerAlias www.symfony.localhost \
 DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"\
  <Directory "C:/xampp/htdocs/symfony.localhost/public">\
  	AllowOverride All\
@@ -16,7 +16,7 @@ DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"\
  </Directory>\
 ErrorLog "logs/symfony.localhost-error.log"\
  CustomLog "logs/symfony.localhost-access.log" common\
-</VirtualHost>\
+</VirtualHost>
 
 ![httpd-vhosts](./img/httpd-vhosts.png)
 
