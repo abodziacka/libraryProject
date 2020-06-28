@@ -5,12 +5,12 @@
  (zazwyczaj znajduje się on w takiej ścieżce - C:\xampp\apache\conf\extra)
 Dodanie do końca pliku: 
 
-![httpd-vhosts](./img/httpd-vhosts.png)
+![httpd-vhosts](./httpd-vhosts.png)
 
 4.	***Dodawanie wpisu DNS*** – (zazwyczaj) w ścieżce C:\Windows\System32\drivers\etc\ otwieramy plik hosts i na końcu pliku dopisujemy: 
 127.0.0.1 symfony.localhost
 
-![hosts](./img/hosts.png)
+![hosts](./hosts.png)
 
 5.	***Następnie po wpisaniu do pola przeglądarki adresu : symfony.localhost*** , powinna pojawić się strona.
 
