@@ -5,19 +5,6 @@
  (zazwyczaj znajduje się on w takiej ścieżce - C:\xampp\apache\conf\extra)
 Dodanie do końca pliku: 
 
-><VirtualHost *:80>\
-ServerName symfony.localhost\
- ServerAlias www.symfony.localhost \
-DocumentRoot "C:/xampp/htdocs/symfony.localhost/public" \
- <Directory "C:/xampp/htdocs/symfony.localhost/public"> \
- 	AllowOverride All \
-	 Order Allow,Deny \
-	 Allow from All \
- </Directory>\
-ErrorLog "logs/symfony.localhost-error.log" \
- CustomLog "logs/symfony.localhost-access.log" common 
-</VirtualHost>
-
 ![httpd-vhosts](./img/httpd-vhosts.png)
 
 4.	***Dodawanie wpisu DNS*** – (zazwyczaj) w ścieżce C:\Windows\System32\drivers\etc\ otwieramy plik hosts i na końcu pliku dopisujemy: 
