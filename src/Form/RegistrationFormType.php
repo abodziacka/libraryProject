@@ -1,6 +1,6 @@
 <?php
 
-//********* Autor: Aleksandra Bodziacka + Marta Brzozowska **********
+//********* Autor: Aleksandra Bodziacka + Marta Brzozowska (style) **********
 
 namespace App\Form;
 
