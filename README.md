@@ -12,7 +12,7 @@ Dodanie do końca pliku:
 
 ![hosts](./hosts.png)
 
-5.	***Następnie po wpisaniu do pola przeglądarki adresu : symfony.localhost*** , powinna pojawić się strona.
+5.	***Następnie po wpisaniu do pola przeglądarki adresu : symfony.localhost/index.php*** , powinna pojawić się strona.
 
 Dodatkowo załączona jest eksportowana z phpMyAdmin baza danych używana do projektu (znajduje się w folderze: instructions, wraz ze screenami bazy danych). 
 Aby wszystkie funkcje (w tym admina) były możliwe do przetestowania najlepiej zaimportować bazę (books.sql).
@@ -22,7 +22,7 @@ Przykładowi użytkownicy:
 *	User:
 	Email: manager1@php.pl , hasło: manager1
 
-***UWAGA*** - Jeżeli na początku przejście do innej zakładki na stronie uruchamia Error 404, należy po adresie symfony.localhost, a przed nazwą zakładki dodać :"index.php". 
+***UWAGA*** - Jeżeli na początku wpisano samo: symfony.localhost i przejście do innej zakładki na stronie uruchamia Error 404, należy po adresie symfony.localhost, a przed nazwą zakładki dodać :"index.php". 
 Następnie wszystko powinno już działać poprawnie.
 np. jeśli jest: http://symfony.localhost/books , to zmienić ścieżkę na: http://symfony.localhost/index.php/books . \
 Przepraszamy za utrudnienia :slightly_smiling_face:
