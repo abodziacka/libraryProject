@@ -18,12 +18,12 @@ ErrorLog "logs/symfony.localhost-error.log"
  CustomLog "logs/symfony.localhost-access.log" common
 </VirtualHost>
 
-![httpd-vhosts](./img/httpd-vhosts.png)
+![httpd-vhosts](./instructions/httpd-vhosts.png)
 
 4.	***Dodawanie wpisu DNS*** – (zazwyczaj) w ścieżce C:\Windows\System32\drivers\etc\ otwieramy plik hosts i na końcu pliku dopisujemy: 
 127.0.0.1 symfony.localhost
 
-![hosts](./img/hosts.png)
+![hosts](./instructions/hosts.png)
 
 5.	***Następnie po wpisaniu do pola przeglądarki adresu : symfony.localhost*** , powinna pojawić się strona.
 
