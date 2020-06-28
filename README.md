@@ -25,4 +25,4 @@ Przykładowi użytkownicy:
 ***UWAGA*** - Jeżeli na początku przejście do innej zakładki na stronie uruchamia Error 404, należy po adresie symfony.localhost, a przed nazwą zakładki dodać :"index.php". 
 Następnie wszystko powinno już działać poprawnie.
 np. jeśli jest: http://symfony.localhost/books , to zmienić ścieżkę na: http://symfony.localhost/index.php/books . 
-Przepraszamy za utrudnienia :slightly_smiling_face
+Przepraszamy za utrudnienia :slightly_smiling_face:
