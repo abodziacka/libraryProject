@@ -22,3 +22,6 @@ Przykładowi użytkownicy:
 *	User:
 	Email: manager1@php.pl , hasło: manager1
 
+***UWAGA*** - Jeżeli na początku prszejście do innej zakładki na stronie uruchamia Error 404, należy po symfony.localhost, a przed nazwą zakładki dodać :"index.php". Po tym powinno już wszystko działać poprawnie.
+np. jeśli jest: http://symfony.localhost/books , to zmienić ścieżkę na: http://symfony.localhost/index.php/books . 
+Przepraszamy za utrudnienia :)
