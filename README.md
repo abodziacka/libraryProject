@@ -6,17 +6,17 @@
 Dodanie do końca pliku: 
 
 ><VirtualHost *:80>\
-⋅ServerName symfony.localhost\
+ServerName symfony.localhost\
  ServerAlias www.symfony.localhost\
 DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"\
  <Directory "C:/xampp/htdocs/symfony.localhost/public">\
  	AllowOverride All\
-	 Order Allow,Deny
-	 Allow from All
- </Directory>
-ErrorLog "logs/symfony.localhost-error.log"
- CustomLog "logs/symfony.localhost-access.log" common
-</VirtualHost>
+	 Order Allow,Deny\
+	 Allow from All\
+ </Directory>\
+ErrorLog "logs/symfony.localhost-error.log"\
+ CustomLog "logs/symfony.localhost-access.log" common\
+</VirtualHost>\
 
 ![httpd-vhosts](./img/httpd-vhosts.png)
 
