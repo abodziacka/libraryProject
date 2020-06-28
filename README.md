@@ -5,12 +5,12 @@
  (zazwyczaj znajduje się on w takiej ścieżce - C:\xampp\apache\conf\extra)
 Dodanie do końca pliku: 
 
-><VirtualHost *:80>
-⋅⋅⋅ServerName symfony.localhost.⋅⋅
- ServerAlias www.symfony.localhost
-DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"
- <Directory "C:/xampp/htdocs/symfony.localhost/public">
- 	AllowOverride All
+><VirtualHost *:80>\
+⋅ServerName symfony.localhost\
+ ServerAlias www.symfony.localhost\
+DocumentRoot "C:/xampp/htdocs/symfony.localhost/public"\
+ <Directory "C:/xampp/htdocs/symfony.localhost/public">\
+ 	AllowOverride All\
 	 Order Allow,Deny
 	 Allow from All
  </Directory>
