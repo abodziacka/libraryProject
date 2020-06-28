@@ -15,7 +15,7 @@ DocumentRoot "C:/xampp/htdocs/symfony.localhost/public" \
 	 Allow from All \
  </Directory>\
 ErrorLog "logs/symfony.localhost-error.log" \
- CustomLog "logs/symfony.localhost-access.log" common \
+ CustomLog "logs/symfony.localhost-access.log" common 
 </VirtualHost>
 
 ![httpd-vhosts](./img/httpd-vhosts.png)
