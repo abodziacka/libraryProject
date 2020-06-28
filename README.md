@@ -14,7 +14,7 @@ Dodanie do końca pliku:
 
 5.	***Następnie po wpisaniu do pola przeglądarki adresu : symfony.localhost*** , powinna pojawić się strona.
 
-Dodatkowo załączona jest eksportowana z phpMyAdmin baza danych używana do projektu. 
+Dodatkowo załączona jest eksportowana z phpMyAdmin baza danych używana do projektu (znajduje się w folderze: instructions, wraz ze screenami bazy danych). 
 Aby wszystkie funkcje (w tym admina) były możliwe do przetestowania najlepiej zaimportować bazę (books.sql).
 Przykładowi użytkownicy:
 *	Admin:
