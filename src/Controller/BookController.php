@@ -63,8 +63,7 @@ class BookController extends AbstractController
     public function myBooks()
     {
 
-        $userName=$this->getUser()->getUsername();
-        $user=$this->userRepository->findByUsername($userName);
+        $user=$this->getUser();
 
         $booklist=$this->repository->findOrder($user->getId());
 

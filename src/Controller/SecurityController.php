@@ -1,8 +1,5 @@
 <?php
 
-//********* Autor: Aleksandra Bodziacka **********
-
-
 
 namespace App\Controller;
 
