@@ -1,5 +1,6 @@
 # Opis
-Aplikacja webowa stworzona w celu zaliczenia fakultetu "Serwisy internetowe PHP MVC Symfony". Pełne README znajduje się w repozytorium : PHPProject-AleksandraBodziacka.
+Aplikacja webowa stworzona w celu zaliczenia fakultetu "Serwisy internetowe PHP MVC Symfony". 
+Pełne README znajduje się w repozytorium : PHPProject-AleksandraBodziacka.
 # Instrukcja uruchomienia pojektu
 1.	***Instalacja XAMPP***
 2.	***Konfiguracja XAMPP (włączenie Apache i MySQL)***
